@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AJ Ads Agency | India's Most Trusted</title>
+
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '765440433279819');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=765440433279819&ev=PageView&noscript=1"
+    /></noscript>
     <style>
         :root {
-            /* Colors extracted directly from your logo */
             --logo-blue: #0093D8;
             --logo-green: #27B14B;
             --gradient-blue: linear-gradient(135deg, #0093D8, #00B4D8);
@@ -53,7 +68,6 @@
         h1 {
             font-size: 28px;
             margin: 10px 0;
-            /* Applying the Blue from your logo to the main name */
             color: var(--logo-blue);
             font-weight: 900;
             text-transform: uppercase;
@@ -88,7 +102,7 @@
         }
 
         .service-list span {
-            color: var(--logo-green); /* Green from logo for tick marks */
+            color: var(--logo-green);
             margin-right: 8px;
         }
 
@@ -103,11 +117,11 @@
             font-weight: bold;
             transition: 0.3s;
             box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+            cursor: pointer;
         }
 
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 25px rgba(37, 211, 102, 0.3);
+        .cta-button:active {
+            transform: scale(0.98);
         }
 
         .guarantee {
@@ -136,12 +150,19 @@
             <p><span>✔</span> Casino & Gaming Traffic</p>
         </div>
 
-        <a href="https://alvo.chat/7frC" class="cta-button">
+        <a href="https://alvo.chat/7frC" class="cta-button" id="whatsapp-cta">
             WHATSAPP FOR ADS SERVICE
         </a>
 
         <p class="guarantee">Guaranteed High Conversion & Results</p>
     </div>
+
+    <script>
+        // Track 'Subscribe' event when button is clicked
+        document.getElementById('whatsapp-cta').addEventListener('click', function() {
+            fbq('track', 'Subscribe');
+        });
+    </script>
 
 </body>
 </html>
